@@ -9,7 +9,6 @@
   --dark-2:#231F20;
   --dark-3:#30282C;
   --wine:#5A1830;
-  --wine-dark:#310917;
   --gray:#646064;
   --soft-gray:#F5F2F3;
   --border:#E9E1E4;
@@ -20,7 +19,7 @@
   padding:0 0 50px;
   color:var(--dark-2);
   background:#FFFFFF;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   line-height:1.5;
 }
 
@@ -167,34 +166,37 @@
 
 /* =========================================================
    DATOS DEL CURSO
+   COMPACTO PARA CANVAS
 ========================================================= */
 
 #sise-andragogia-home .sise-stats-wrap{
   position:relative;
   z-index:4;
-  max-width:1180px;
-  margin:-54px auto 42px;
-  padding:0 24px;
+  width:calc(100% - 32px);
+  max-width:840px;
+  margin:-38px auto 28px;
+  padding:0;
 }
 
 #sise-andragogia-home .sise-stats{
   width:100%;
+  table-layout:fixed;
   overflow:hidden;
   border-collapse:separate;
   border-spacing:0;
   border:1px solid rgba(255,255,255,.12);
-  border-radius:18px;
+  border-radius:13px;
   background:linear-gradient(135deg,#211D1F 0%,#2A2226 100%);
-  box-shadow:0 18px 45px rgba(35,31,32,.18);
+  box-shadow:0 12px 26px rgba(35,31,32,.14);
 }
 
 #sise-andragogia-home .sise-stats td{
   width:20%;
-  padding:26px 18px;
+  padding:12px 6px 11px;
   color:#FFFFFF;
   text-align:center;
-  vertical-align:top;
-  border-right:1px solid rgba(255,255,255,.1);
+  vertical-align:middle;
+  border-right:1px solid rgba(255,255,255,.10);
 }
 
 #sise-andragogia-home .sise-stats td:last-child{
@@ -205,29 +207,39 @@
   display:flex;
   align-items:center;
   justify-content:center;
-  width:46px;
-  height:46px;
-  margin:0 auto 13px;
+  width:32px;
+  height:32px;
+  margin:0 auto 7px;
   border-radius:50%;
   color:#FFFFFF;
   background:linear-gradient(135deg,#FF0050,#FF386F);
-  box-shadow:0 0 0 6px rgba(255,0,80,.1);
-  font-size:16px;
-  font-weight:900;
+  box-shadow:0 0 0 3px rgba(255,0,80,.10);
+}
+
+#sise-andragogia-home .sise-stat-icon svg{
+  width:16px;
+  height:16px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
 }
 
 #sise-andragogia-home .sise-stat-value{
-  margin:0 0 4px;
+  margin:0 0 2px;
   color:#FFFFFF;
-  font-size:21px;
+  font-size:15px;
+  line-height:1.15;
   font-weight:800;
 }
 
 #sise-andragogia-home .sise-stat-label{
-  margin:0;
-  color:rgba(255,255,255,.67);
-  font-size:13px;
-  line-height:1.35;
+  margin:0 auto;
+  max-width:125px;
+  color:rgba(255,255,255,.65);
+  font-size:10px;
+  line-height:1.2;
 }
 
 
@@ -257,7 +269,7 @@
 
 #sise-andragogia-home .sise-navigation{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:12px;
   margin-bottom:18px;
 }
@@ -277,10 +289,9 @@
   background:#FFFFFF;
   box-shadow:0 7px 18px rgba(35,31,32,.06);
   cursor:pointer;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   font-size:15px;
   font-weight:800;
-  text-align:center;
 }
 
 #sise-andragogia-home .sise-nav-button:hover{
@@ -288,7 +299,6 @@
   border-color:var(--pink);
   background:var(--pink);
   transform:translateY(-2px);
-  box-shadow:0 12px 24px rgba(255,0,80,.18);
 }
 
 #sise-andragogia-home .sise-nav-button.active{
@@ -318,7 +328,6 @@
 
 #sise-andragogia-home .sise-dynamic-box{
   overflow:hidden;
-  min-height:530px;
   border:1px solid var(--border);
   border-radius:18px;
   background:#FFFFFF;
@@ -384,7 +393,7 @@
   }
 }
 
-#sise-andragogia-home .sise-dynamic-body p{
+#sise-andragogia-home .sise-dynamic-body > p{
   margin:0 0 22px;
   color:#5B5457;
   font-size:17px;
@@ -403,7 +412,6 @@
   margin:30px 0 15px;
   color:#231F20;
   font-size:23px;
-  line-height:1.25;
 }
 
 #sise-andragogia-home .sise-section-title:first-child{
@@ -412,11 +420,11 @@
 
 #sise-andragogia-home .sise-title-number{
   display:inline-flex;
-  flex:0 0 auto;
   align-items:center;
   justify-content:center;
   width:36px;
   height:36px;
+  flex:0 0 36px;
   border-radius:50%;
   color:#FFFFFF;
   background:var(--pink);
@@ -457,7 +465,6 @@
 
 #sise-andragogia-home .sise-goal-card p{
   margin:0;
-  color:#40383B;
 }
 
 #sise-andragogia-home .sise-competence{
@@ -481,7 +488,7 @@
 
 
 /* =========================================================
-   MÓDULOS
+   MÓDULOS SIMPLIFICADOS
 ========================================================= */
 
 #sise-andragogia-home .sise-modules-grid{
@@ -493,15 +500,16 @@
 #sise-andragogia-home .sise-module-card{
   position:relative;
   overflow:hidden;
-  min-height:415px;
-  padding:29px;
-  border:1px solid rgba(255,255,255,.1);
+  min-height:225px;
+  padding:27px;
   border-radius:17px;
   color:#FFFFFF;
   background:
     radial-gradient(circle at 100% 0,rgba(255,0,80,.2),transparent 40%),
     linear-gradient(145deg,#1D1A1C 0%,#2B2528 100%);
   box-shadow:0 14px 28px rgba(35,31,32,.14);
+  display:flex;
+  flex-direction:column;
 }
 
 #sise-andragogia-home .sise-module-card:after{
@@ -518,23 +526,25 @@
 #sise-andragogia-home .sise-module-top{
   display:flex;
   align-items:center;
-  gap:16px;
-  margin-bottom:24px;
+  gap:15px;
+  margin-bottom:20px;
+  position:relative;
+  z-index:2;
 }
 
 #sise-andragogia-home .sise-module-number{
   display:flex;
-  flex:0 0 auto;
   align-items:center;
   justify-content:center;
-  width:58px;
-  height:58px;
+  width:50px;
+  height:50px;
+  flex:0 0 50px;
   border-radius:50%;
   color:#FFFFFF;
   background:linear-gradient(135deg,#FF0050,#FF477C);
-  font-size:23px;
+  font-size:20px;
   font-weight:900;
-  box-shadow:0 0 0 7px rgba(255,0,80,.11);
+  box-shadow:0 0 0 6px rgba(255,0,80,.11);
 }
 
 #sise-andragogia-home .sise-module-label{
@@ -546,47 +556,20 @@
 }
 
 #sise-andragogia-home .sise-module-card h3{
-  min-height:62px;
-  margin:0 0 14px;
+  position:relative;
+  z-index:2;
+  margin:0 0 12px;
   color:#FFFFFF;
   font-size:24px;
-  line-height:1.3;
+  line-height:1.25;
 }
 
-#sise-andragogia-home .sise-module-card p{
-  margin:0 0 18px;
-  color:rgba(255,255,255,.78);
-  font-size:16px;
-  line-height:1.55;
-}
-
-#sise-andragogia-home .sise-module-topics{
-  margin:0 0 24px;
-  padding:16px 17px;
-  border:1px solid rgba(255,255,255,.10);
-  border-radius:12px;
-  background:rgba(255,255,255,.05);
-}
-
-#sise-andragogia-home .sise-module-topics strong{
-  display:block;
-  margin-bottom:9px;
-  color:#FF8AAF;
+#sise-andragogia-home .sise-module-help{
+  position:relative;
+  z-index:2;
+  margin:0 0 20px;
+  color:rgba(255,255,255,.68);
   font-size:13px;
-  letter-spacing:.8px;
-  text-transform:uppercase;
-}
-
-#sise-andragogia-home .sise-module-topics ul{
-  margin:0;
-  padding-left:20px;
-}
-
-#sise-andragogia-home .sise-module-topics li{
-  margin:6px 0;
-  color:rgba(255,255,255,.82);
-  font-size:15px;
-  line-height:1.4;
 }
 
 #sise-andragogia-home .sise-module-btn{
@@ -595,12 +578,14 @@
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:13px 20px;
+  align-self:flex-start;
+  margin-top:auto;
+  padding:12px 19px;
   border-radius:9px;
   color:#FFFFFF;
   background:var(--pink);
   text-decoration:none;
-  font-size:15px;
+  font-size:14px;
   font-weight:700;
 }
 
@@ -612,6 +597,87 @@
 
 
 /* =========================================================
+   SÍLABO
+========================================================= */
+
+#sise-andragogia-home .sise-syllabus-card{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  margin-top:18px;
+  padding:22px 24px;
+  border:1px solid #F1D5DE;
+  border-left:6px solid var(--pink);
+  border-radius:14px;
+  background:linear-gradient(105deg,#FFF1F5 0%,#FFFFFF 70%);
+}
+
+#sise-andragogia-home .sise-syllabus-card:after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  right:-48px;
+  top:-62px;
+  border:1px solid rgba(255,0,80,.14);
+  border-radius:50%;
+}
+
+#sise-andragogia-home .sise-syllabus-info{
+  position:relative;
+  z-index:2;
+}
+
+#sise-andragogia-home .sise-syllabus-label{
+  display:block;
+  margin-bottom:4px;
+  color:var(--pink);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+
+#sise-andragogia-home .sise-syllabus-card h3{
+  margin:0 0 5px;
+  color:#231F20;
+  font-size:21px;
+}
+
+#sise-andragogia-home .sise-syllabus-card p{
+  margin:0;
+  color:#655C60;
+  font-size:13px;
+  line-height:1.5;
+}
+
+#sise-andragogia-home .sise-syllabus-btn{
+  position:relative;
+  z-index:2;
+  display:inline-flex;
+  flex:0 0 auto;
+  align-items:center;
+  justify-content:center;
+  min-width:145px;
+  padding:12px 18px;
+  border-radius:9px;
+  color:#FFFFFF;
+  background:var(--dark-2);
+  text-decoration:none;
+  font-size:14px;
+  font-weight:800;
+}
+
+#sise-andragogia-home .sise-syllabus-btn:hover{
+  color:#FFFFFF;
+  background:var(--pink);
+}
+
+
+/* =========================================================
    EVALUACIÓN
 ========================================================= */
 
@@ -619,11 +685,12 @@
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:14px;
+  align-items:stretch;
 }
 
 #sise-andragogia-home .sise-evaluation-card{
-  min-height:260px;
-  padding:26px 23px;
+  min-height:310px;
+  padding:24px 21px;
   border:1px solid #E9E1E4;
   border-top:5px solid var(--pink);
   border-radius:16px;
@@ -635,18 +702,18 @@
   display:flex;
   align-items:center;
   justify-content:center;
-  width:50px;
-  height:50px;
-  margin-bottom:20px;
+  width:48px;
+  height:48px;
+  margin-bottom:17px;
   border-radius:50%;
   color:#FFFFFF;
   background:linear-gradient(135deg,#FF0050,#FF467B);
-  font-size:18px;
+  font-size:17px;
   font-weight:900;
 }
 
 #sise-andragogia-home .sise-evaluation-card h3{
-  margin:0 0 12px;
+  margin:0 0 10px;
   color:#231F20;
   font-size:20px;
   line-height:1.25;
@@ -655,9 +722,92 @@
 #sise-andragogia-home .sise-evaluation-card p{
   margin:0;
   color:#665E61;
-  font-size:15px;
-  line-height:1.55;
+  font-size:14px;
+  line-height:1.5;
 }
+
+
+/* =========================================================
+   COEVALUACIÓN
+========================================================= */
+
+#sise-andragogia-home .sise-coeval-card{
+  display:flex;
+  flex-direction:column;
+}
+
+#sise-andragogia-home .sise-coeval-intro{
+  margin-bottom:13px !important;
+}
+
+#sise-andragogia-home .sise-coeval-flow{
+  display:flex;
+  align-items:stretch;
+  gap:5px;
+  margin:5px 0 16px;
+}
+
+#sise-andragogia-home .sise-coeval-step{
+  flex:1;
+  min-width:0;
+  padding:9px 5px;
+  border:1px solid #F1D5DE;
+  border-radius:8px;
+  background:#FFF4F7;
+  text-align:center;
+}
+
+#sise-andragogia-home .sise-coeval-step strong{
+  display:block;
+  margin-bottom:3px;
+  color:var(--pink);
+  font-size:11px;
+  font-weight:900;
+}
+
+#sise-andragogia-home .sise-coeval-step span{
+  display:block;
+  color:#4D4548;
+  font-size:10px;
+  line-height:1.2;
+  font-weight:700;
+}
+
+#sise-andragogia-home .sise-coeval-arrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 12px;
+  color:var(--pink);
+  font-size:18px;
+  font-weight:900;
+}
+
+#sise-andragogia-home .sise-coeval-manual-btn{
+  display:flex;
+  width:100%;
+  align-items:center;
+  justify-content:center;
+  margin-top:auto;
+  padding:11px 13px;
+  border-radius:8px;
+  color:#FFFFFF;
+  background:var(--dark-2);
+  text-decoration:none;
+  font-size:13px;
+  font-weight:800;
+}
+
+#sise-andragogia-home .sise-coeval-manual-btn:hover{
+  color:#FFFFFF;
+  background:var(--pink);
+  transform:translateY(-1px);
+}
+
+
+/* =========================================================
+   RESULTADO INTEGRADOR
+========================================================= */
 
 #sise-andragogia-home .sise-pass-card{
   display:flex;
@@ -692,94 +842,14 @@
   color:rgba(255,255,255,.86);
 }
 
+#sise-andragogia-home .sise-pass-card strong{
+  color:#FFFFFF;
+}
+
 
 /* =========================================================
-   DESCARGABLES
+   PLANTILLAS
 ========================================================= */
-
-#sise-andragogia-home .sise-download-content{
-  position:relative;
-  overflow:hidden;
-  min-height:330px;
-  padding:50px 30px;
-  border-radius:16px;
-  text-align:center;
-  color:#FFFFFF;
-  background:
-    radial-gradient(circle at 15% 90%,rgba(255,0,80,.18),transparent 34%),
-    radial-gradient(circle at 90% 10%,rgba(255,0,80,.24),transparent 33%),
-    linear-gradient(135deg,#171416 0%,#33101E 100%);
-}
-
-#sise-andragogia-home .sise-download-content:before{
-  content:"";
-  position:absolute;
-  width:230px;
-  height:230px;
-  right:-70px;
-  top:-100px;
-  border:1px solid rgba(255,255,255,.10);
-  border-radius:50%;
-}
-
-#sise-andragogia-home .sise-download-icon{
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:68px;
-  height:68px;
-  margin:0 auto 20px;
-  border-radius:50%;
-  color:#FFFFFF;
-  background:var(--pink);
-  font-size:30px;
-  font-weight:900;
-  box-shadow:0 0 0 9px rgba(255,0,80,.12);
-}
-
-#sise-andragogia-home .sise-download-content h3{
-  position:relative;
-  margin:0 0 12px;
-  color:#FFFFFF;
-  font-size:30px;
-}
-
-#sise-andragogia-home .sise-download-content p{
-  position:relative;
-  max-width:720px;
-  margin:0 auto 28px;
-  color:rgba(255,255,255,.72);
-  font-size:17px;
-}
-
-#sise-andragogia-home .sise-download-actions{
-  position:relative;
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:12px;
-}
-
-#sise-andragogia-home .sise-download-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:190px;
-  padding:14px 22px;
-  border-radius:9px;
-  color:#231F20;
-  background:#FFFFFF;
-  text-decoration:none;
-  font-size:15px;
-  font-weight:700;
-}
-
-#sise-andragogia-home .sise-download-btn:hover{
-  color:#FFFFFF;
-  background:var(--pink);
-  transform:translateY(-2px);
-}
 
 #sise-andragogia-home .sise-template{
   display:none !important;
@@ -787,43 +857,60 @@
 
 
 /* =========================================================
-   RESPONSIVE
+   CANVAS / TABLET
+   DATOS SIEMPRE EN UNA FILA
 ========================================================= */
 
 @media screen and (max-width:900px){
 
-  #sise-andragogia-home .sise-stats,
-  #sise-andragogia-home .sise-stats tbody,
-  #sise-andragogia-home .sise-stats tr{
-    display:block;
+  #sise-andragogia-home .sise-stats-wrap{
+    width:calc(100% - 20px);
+    max-width:100%;
+    margin-top:-34px;
+  }
+
+  #sise-andragogia-home .sise-stats{
+    display:table;
+    table-layout:fixed;
+  }
+
+  #sise-andragogia-home .sise-stats tbody{
+    display:table-row-group;
   }
 
   #sise-andragogia-home .sise-stats tr{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
+    display:table-row;
   }
 
   #sise-andragogia-home .sise-stats td{
-    display:block;
-    width:100%;
-    border-right:1px solid rgba(255,255,255,.1);
-    border-bottom:1px solid rgba(255,255,255,.1);
+    display:table-cell;
+    width:20%;
+    padding:10px 4px;
+    border-bottom:none;
   }
 
-  #sise-andragogia-home .sise-stats td:last-child{
-    grid-column:1 / -1;
+  #sise-andragogia-home .sise-stat-icon{
+    width:30px;
+    height:30px;
+    margin-bottom:6px;
   }
 
-  #sise-andragogia-home .sise-navigation{
-    grid-template-columns:repeat(2,1fr);
+  #sise-andragogia-home .sise-stat-icon svg{
+    width:15px;
+    height:15px;
+  }
+
+  #sise-andragogia-home .sise-stat-value{
+    font-size:13px;
+  }
+
+  #sise-andragogia-home .sise-stat-label{
+    max-width:110px;
+    font-size:9.5px;
   }
 
   #sise-andragogia-home .sise-modules-grid{
     grid-template-columns:1fr;
-  }
-
-  #sise-andragogia-home .sise-module-card h3{
-    min-height:auto;
   }
 
   #sise-andragogia-home .sise-evaluation-grid{
@@ -836,7 +923,11 @@
 }
 
 
-@media screen and (max-width:600px){
+/* =========================================================
+   MÓVIL
+========================================================= */
+
+@media screen and (max-width:540px){
 
   #sise-andragogia-home .sise-container{
     padding-left:16px;
@@ -860,17 +951,32 @@
     width:100%;
   }
 
-  #sise-andragogia-home .sise-stats-wrap{
-    margin-top:-44px;
-    padding:0 16px;
+  #sise-andragogia-home .sise-stats,
+  #sise-andragogia-home .sise-stats tbody,
+  #sise-andragogia-home .sise-stats tr{
+    display:block;
   }
 
   #sise-andragogia-home .sise-stats tr{
-    grid-template-columns:1fr;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  #sise-andragogia-home .sise-stats td{
+    display:block;
+    width:100%;
+    padding:12px 8px;
+    border-bottom:1px solid rgba(255,255,255,.10);
+  }
+
+  #sise-andragogia-home .sise-stats td:nth-child(2n){
+    border-right:none;
   }
 
   #sise-andragogia-home .sise-stats td:last-child{
-    grid-column:auto;
+    grid-column:1/-1;
+    border-right:none;
+    border-bottom:none;
   }
 
   #sise-andragogia-home .sise-navigation{
@@ -893,8 +999,13 @@
     padding:25px 21px;
   }
 
-  #sise-andragogia-home .sise-module-card{
-    min-height:auto;
+  #sise-andragogia-home .sise-syllabus-card{
+    display:block;
+  }
+
+  #sise-andragogia-home .sise-syllabus-btn{
+    width:100%;
+    margin-top:16px;
   }
 
   #sise-andragogia-home .sise-pass-card{
@@ -906,10 +1017,14 @@
     margin:0 auto 20px;
   }
 
-  #sise-andragogia-home .sise-download-content{
-    padding:42px 20px;
+  #sise-andragogia-home .sise-coeval-flow{
+    display:grid;
+    grid-template-columns:1fr;
   }
 
+  #sise-andragogia-home .sise-coeval-arrow{
+    transform:rotate(90deg);
+  }
 }
 </style>
 
@@ -931,42 +1046,27 @@
         Programa de formación docente
       </div>
 
-
       <h1>
-
         <span class="sise-highlight">
           Evaluaciones inteligentes,
         </span>
-
         <br>
-
         auténticas y por competencias
-
       </h1>
 
-
       <p class="sise-hero-description">
-
         Fortalece tus prácticas evaluativas mediante el diseño de
         evidencias auténticas, criterios observables, instrumentos
         pertinentes, retroalimentación formativa y un uso responsable
         de la Inteligencia Artificial en contextos reales de enseñanza SISE.
-
       </p>
-
-
-      <!--
-        ABRE EN NUEVA PESTAÑA
-      -->
 
       <a
         class="sise-btn-primary"
         href="https://aulad.educad.pe/courses/668/modules"
         target="_blank"
         rel="noopener noreferrer">
-
         Iniciar recorrido&nbsp; →
-
       </a>
 
     </div>
@@ -974,7 +1074,6 @@
   </div>
 
 </div>
-
 
 
 <!-- =========================================================
@@ -990,27 +1089,42 @@
       <tr>
 
 
+        <!-- MÓDULOS -->
+
         <td>
 
           <div class="sise-stat-icon">
-            04
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <polygon points="12 2 22 7 12 12 2 7 12 2"></polygon>
+              <polyline points="2 12 12 17 22 12"></polyline>
+              <polyline points="2 17 12 22 22 17"></polyline>
+            </svg>
+
           </div>
 
           <div class="sise-stat-value">
-            Módulos
+            4 módulos
           </div>
 
           <p class="sise-stat-label">
-            8 temas de aprendizaje
+            Ruta de aprendizaje
           </p>
 
         </td>
 
 
+        <!-- DURACIÓN -->
+
         <td>
 
           <div class="sise-stat-icon">
-            12h
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 7v5l3.5 2"></path>
+            </svg>
+
           </div>
 
           <div class="sise-stat-value">
@@ -1018,16 +1132,22 @@
           </div>
 
           <p class="sise-stat-label">
-            Tiempo estimado
+            Duración del contenido
           </p>
 
         </td>
 
 
+        <!-- HABILIDAD -->
+
         <td>
 
           <div class="sise-stat-icon">
-            HB
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"></path>
+            </svg>
+
           </div>
 
           <div class="sise-stat-value">
@@ -1041,10 +1161,19 @@
         </td>
 
 
+        <!-- MODALIDAD -->
+
         <td>
 
           <div class="sise-stat-icon">
-            A
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="14" rx="2"></rect>
+              <path d="M8 21h8"></path>
+              <path d="M12 18v3"></path>
+              <path d="M10 9l5 3-5 3z"></path>
+            </svg>
+
           </div>
 
           <div class="sise-stat-value">
@@ -1058,18 +1187,27 @@
         </td>
 
 
+        <!-- PÚBLICO -->
+
         <td>
 
           <div class="sise-stat-icon">
-            SISE
+
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="9" cy="8" r="3"></circle>
+              <circle cx="17" cy="9" r="2.5"></circle>
+              <path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"></path>
+              <path d="M14 15c3.4-.5 6 1.7 6 5"></path>
+            </svg>
+
           </div>
 
           <div class="sise-stat-value">
-            Docentes SISE
+            SISE
           </div>
 
           <p class="sise-stat-label">
-            Público objetivo
+            Docentes y administrativos
           </p>
 
         </td>
@@ -1084,7 +1222,6 @@
 </div>
 
 
-
 <!-- =========================================================
      CONTENIDO PRINCIPAL
 ========================================================= -->
@@ -1097,21 +1234,17 @@
   <div class="sise-intro">
 
     <p>
-
       <strong>Instrucción:</strong>
-
       selecciona uno de los botones para consultar la información.
       El contenido se mostrará en una única caja dinámica.
-
     </p>
 
   </div>
 
 
-
-  <!-- =======================================================
-       NAVEGACIÓN INTERNA
-  ======================================================== -->
+  <!-- =====================================================
+       NAVEGACIÓN
+  ====================================================== -->
 
   <div
     class="sise-navigation"
@@ -1126,10 +1259,7 @@
       role="tab"
       aria-selected="true">
 
-      <span class="sise-nav-icon">
-        i
-      </span>
-
+      <span class="sise-nav-icon">i</span>
       Sobre el curso
 
     </button>
@@ -1142,10 +1272,7 @@
       role="tab"
       aria-selected="false">
 
-      <span class="sise-nav-icon">
-        ☰
-      </span>
-
+      <span class="sise-nav-icon">☰</span>
       Módulos
 
     </button>
@@ -1158,27 +1285,8 @@
       role="tab"
       aria-selected="false">
 
-      <span class="sise-nav-icon">
-        ✓
-      </span>
-
+      <span class="sise-nav-icon">✓</span>
       Evaluación
-
-    </button>
-
-
-    <button
-      type="button"
-      class="sise-nav-button"
-      data-section="descargables"
-      role="tab"
-      aria-selected="false">
-
-      <span class="sise-nav-icon">
-        ↓
-      </span>
-
-      Descargables
 
     </button>
 
@@ -1186,10 +1294,9 @@
   </div>
 
 
-
-  <!-- =======================================================
-       CAJA DINÁMICA PRINCIPAL
-  ======================================================== -->
+  <!-- =====================================================
+       CAJA DINÁMICA INICIAL
+  ====================================================== -->
 
   <section
     class="sise-dynamic-box"
@@ -1202,22 +1309,16 @@
       <span
         class="sise-dynamic-kicker"
         id="sise-dynamic-kicker">
-
         Información general
-
       </span>
-
 
       <h2
         class="sise-dynamic-title"
         id="sise-dynamic-title">
-
         Conoce el propósito del curso
-
       </h2>
 
     </div>
-
 
 
     <div
@@ -1226,73 +1327,43 @@
 
 
       <h3 class="sise-section-title">
-
-        <span class="sise-title-number">
-          01
-        </span>
-
+        <span class="sise-title-number">01</span>
         Descripción del curso
-
       </h3>
 
-
       <p>
-
         En este curso analizarás tus prácticas evaluativas para
         identificar brechas entre evidencias, competencias y
-        desempeños esperados.
-
-        A partir de este diagnóstico, diseñarás evidencias auténticas,
-        construirás instrumentos con criterios observables e integrarás
-        retroalimentación formativa y uso responsable de Inteligencia
-        Artificial en una estrategia aplicable a un curso real.
-
+        desempeños esperados. A partir de este diagnóstico,
+        diseñarás evidencias auténticas, construirás instrumentos
+        con criterios observables e integrarás retroalimentación
+        formativa y uso responsable de Inteligencia Artificial
+        en una estrategia aplicable a un curso real.
       </p>
 
 
-
       <h3 class="sise-section-title">
-
-        <span class="sise-title-number">
-          02
-        </span>
-
+        <span class="sise-title-number">02</span>
         ¿A quiénes está dirigido?
-
       </h3>
-
 
       <div class="sise-audience-card">
 
         <p>
-
-          <strong>Docentes SISE</strong>
-
-          interesados en fortalecer el diseño y aplicación de
-          evaluaciones alineadas al aprendizaje por competencias
-          y a desempeños observables.
-
+          <strong>Docentes y administrativos SISE</strong>
         </p>
 
       </div>
 
 
-
       <h3 class="sise-section-title">
-
-        <span class="sise-title-number">
-          03
-        </span>
-
+        <span class="sise-title-number">03</span>
         Logro del curso
-
       </h3>
-
 
       <div class="sise-goal-card">
 
         <p>
-
           Diseñar una estrategia innovadora de evaluación auténtica
           por competencias, integrando criterios, instrumentos,
           retroalimentación formativa, uso responsable de IA y apoyo
@@ -1300,23 +1371,15 @@
           para mejorar la calidad de los procesos de
           enseñanza-aprendizaje en SISE con pertinencia, ética
           e impacto formativo.
-
         </p>
 
       </div>
 
 
-
       <h3 class="sise-section-title">
-
-        <span class="sise-title-number">
-          04
-        </span>
-
+        <span class="sise-title-number">04</span>
         Competencia a desarrollar
-
       </h3>
-
 
       <div class="sise-competence">
 
@@ -1325,12 +1388,10 @@
         </strong>
 
         <p>
-
           Habilidad para buscar, analizar e interpretar información,
           diseñar y aplicar metodologías de investigación y evaluación
           auténtica, y generar propuestas innovadoras para mejorar
           los procesos de enseñanza-aprendizaje.
-
         </p>
 
       </div>
@@ -1341,10 +1402,9 @@
   </section>
 
 
-
-  <!-- =======================================================
-       PLANTILLA: SOBRE EL CURSO
-  ======================================================== -->
+  <!-- =====================================================
+       SOBRE EL CURSO
+  ====================================================== -->
 
   <div
     id="sise-template-sobre-curso"
@@ -1354,73 +1414,43 @@
 
 
     <h3 class="sise-section-title">
-
-      <span class="sise-title-number">
-        01
-      </span>
-
+      <span class="sise-title-number">01</span>
       Descripción del curso
-
     </h3>
 
-
     <p>
-
       En este curso analizarás tus prácticas evaluativas para
       identificar brechas entre evidencias, competencias y
-      desempeños esperados.
-
-      A partir de este diagnóstico, diseñarás evidencias auténticas,
-      construirás instrumentos con criterios observables e integrarás
-      retroalimentación formativa y uso responsable de Inteligencia
-      Artificial en una estrategia aplicable a un curso real.
-
+      desempeños esperados. A partir de este diagnóstico,
+      diseñarás evidencias auténticas, construirás instrumentos
+      con criterios observables e integrarás retroalimentación
+      formativa y uso responsable de Inteligencia Artificial
+      en una estrategia aplicable a un curso real.
     </p>
 
 
-
     <h3 class="sise-section-title">
-
-      <span class="sise-title-number">
-        02
-      </span>
-
+      <span class="sise-title-number">02</span>
       ¿A quiénes está dirigido?
-
     </h3>
-
 
     <div class="sise-audience-card">
 
       <p>
-
-        <strong>Docentes SISE</strong>
-
-        interesados en fortalecer el diseño y aplicación de
-        evaluaciones alineadas al aprendizaje por competencias
-        y a desempeños observables.
-
+        <strong>Docentes y administrativos SISE</strong>
       </p>
 
     </div>
 
 
-
     <h3 class="sise-section-title">
-
-      <span class="sise-title-number">
-        03
-      </span>
-
+      <span class="sise-title-number">03</span>
       Logro del curso
-
     </h3>
-
 
     <div class="sise-goal-card">
 
       <p>
-
         Diseñar una estrategia innovadora de evaluación auténtica
         por competencias, integrando criterios, instrumentos,
         retroalimentación formativa, uso responsable de IA y apoyo
@@ -1428,23 +1458,15 @@
         para mejorar la calidad de los procesos de
         enseñanza-aprendizaje en SISE con pertinencia, ética
         e impacto formativo.
-
       </p>
 
     </div>
 
 
-
     <h3 class="sise-section-title">
-
-      <span class="sise-title-number">
-        04
-      </span>
-
+      <span class="sise-title-number">04</span>
       Competencia a desarrollar
-
     </h3>
-
 
     <div class="sise-competence">
 
@@ -1453,12 +1475,10 @@
       </strong>
 
       <p>
-
         Habilidad para buscar, analizar e interpretar información,
         diseñar y aplicar metodologías de investigación y evaluación
         auténtica, y generar propuestas innovadoras para mejorar
         los procesos de enseñanza-aprendizaje.
-
       </p>
 
     </div>
@@ -1467,40 +1487,29 @@
   </div>
 
 
-
-  <!-- =======================================================
-       PLANTILLA: MÓDULOS
-  ======================================================== -->
+  <!-- =====================================================
+       MÓDULOS
+  ====================================================== -->
 
   <div
     id="sise-template-modulos"
     class="sise-template"
     data-kicker="Ruta de aprendizaje"
-    data-title="Panel de contenidos">
+    data-title="Ingresa a tus módulos">
 
 
     <p>
-
-      Avanza por los cuatro módulos de manera progresiva.
-
-      El recorrido parte del diagnóstico de tus prácticas
-      evaluativas, continúa con el diseño de evidencias auténticas
-      e instrumentos y culmina con la integración de una estrategia
-      de evaluación auténtica aplicable a un curso real.
-
+      Selecciona el módulo que deseas revisar y da clic en el botón
+      correspondiente para iniciar tu recorrido de aprendizaje.
     </p>
-
 
 
     <div class="sise-modules-grid">
 
 
-      <!-- =====================================================
-           MÓDULO 1
-      ====================================================== -->
+      <!-- MÓDULO 1 -->
 
       <article class="sise-module-card">
-
 
         <div class="sise-module-top">
 
@@ -1509,49 +1518,18 @@
           </div>
 
           <div class="sise-module-label">
-            Primer módulo
+            Módulo 1
           </div>
 
         </div>
-
 
         <h3>
           Diagnóstico de la evaluación auténtica
         </h3>
 
-
-        <p>
-
-          Diagnosticar prácticas evaluativas actuales para
-          identificar brechas entre evidencias, competencias
-          y desempeños esperados, utilizando una matriz de
-          análisis en contexto docente SISE.
-
+        <p class="sise-module-help">
+          Da clic para iniciar el módulo.
         </p>
-
-
-        <div class="sise-module-topics">
-
-          <strong>
-            Temas del módulo
-          </strong>
-
-          <ul>
-
-            <li>
-              Tema 1. Evaluación para el aprendizaje.
-            </li>
-
-            <li>
-              Tema 2. Diagnóstico de evidencias actuales.
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <!-- ABRE EN NUEVA PESTAÑA -->
 
         <a
           class="sise-module-btn"
@@ -1563,17 +1541,12 @@
 
         </a>
 
-
       </article>
 
 
-
-      <!-- =====================================================
-           MÓDULO 2
-      ====================================================== -->
+      <!-- MÓDULO 2 -->
 
       <article class="sise-module-card">
-
 
         <div class="sise-module-top">
 
@@ -1582,48 +1555,18 @@
           </div>
 
           <div class="sise-module-label">
-            Segundo módulo
+            Módulo 2
           </div>
 
         </div>
-
 
         <h3>
           Diseño inverso y evidencias auténticas
         </h3>
 
-
-        <p>
-
-          Diseñar evidencias auténticas alineadas a resultados
-          de aprendizaje y competencias, aplicando diseño inverso
-          en un curso real.
-
+        <p class="sise-module-help">
+          Da clic para iniciar el módulo.
         </p>
-
-
-        <div class="sise-module-topics">
-
-          <strong>
-            Temas del módulo
-          </strong>
-
-          <ul>
-
-            <li>
-              Tema 3. Diseño inverso aplicado a evaluación.
-            </li>
-
-            <li>
-              Tema 4. Rediseño de evidencia auténtica.
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <!-- ABRE EN NUEVA PESTAÑA -->
 
         <a
           class="sise-module-btn"
@@ -1635,17 +1578,12 @@
 
         </a>
 
-
       </article>
 
 
-
-      <!-- =====================================================
-           MÓDULO 3
-      ====================================================== -->
+      <!-- MÓDULO 3 -->
 
       <article class="sise-module-card">
-
 
         <div class="sise-module-top">
 
@@ -1654,49 +1592,18 @@
           </div>
 
           <div class="sise-module-label">
-            Tercer módulo
+            Módulo 3
           </div>
 
         </div>
-
 
         <h3>
           Instrumentos, criterios y uso responsable de IA
         </h3>
 
-
-        <p>
-
-          Construir instrumentos de evaluación con criterios
-          observables, niveles de desempeño y uso responsable
-          de IA, empleando el Asistente de Evaluaciones
-          “Instrumentos de Evaluación”.
-
+        <p class="sise-module-help">
+          Da clic para iniciar el módulo.
         </p>
-
-
-        <div class="sise-module-topics">
-
-          <strong>
-            Temas del módulo
-          </strong>
-
-          <ul>
-
-            <li>
-              Tema 5. Construcción de instrumentos de evaluación.
-            </li>
-
-            <li>
-              Tema 6. Criterios, retroalimentación y uso responsable de IA.
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <!-- ABRE EN NUEVA PESTAÑA -->
 
         <a
           class="sise-module-btn"
@@ -1708,17 +1615,12 @@
 
         </a>
 
-
       </article>
 
 
-
-      <!-- =====================================================
-           MÓDULO 4
-      ====================================================== -->
+      <!-- MÓDULO 4 -->
 
       <article class="sise-module-card">
-
 
         <div class="sise-module-top">
 
@@ -1727,48 +1629,18 @@
           </div>
 
           <div class="sise-module-label">
-            Cuarto módulo
+            Módulo 4
           </div>
 
         </div>
-
 
         <h3>
           Estrategia final de evaluación auténtica
         </h3>
 
-
-        <p>
-
-          Integrar una estrategia de evaluación auténtica aplicable
-          a un curso real, articulando evidencias, instrumentos,
-          retroalimentación y criterios éticos de uso de IA.
-
+        <p class="sise-module-help">
+          Da clic para iniciar el módulo.
         </p>
-
-
-        <div class="sise-module-topics">
-
-          <strong>
-            Temas del módulo
-          </strong>
-
-          <ul>
-
-            <li>
-              Tema 7. Integración de estrategia evaluativa.
-            </li>
-
-            <li>
-              Tema 8. Sustentación y plan de implementación.
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <!-- ABRE EN NUEVA PESTAÑA -->
 
         <a
           class="sise-module-btn"
@@ -1780,19 +1652,54 @@
 
         </a>
 
-
       </article>
 
 
     </div>
 
+
+    <!-- =====================================================
+         SÍLABO
+    ====================================================== -->
+
+    <div class="sise-syllabus-card">
+
+      <div class="sise-syllabus-info">
+
+        <span class="sise-syllabus-label">
+          Documento del curso
+        </span>
+
+        <h3>
+          Sílabo
+        </h3>
+
+        <p>
+          Revisa el sílabo para conocer la organización,
+          los resultados de aprendizaje, contenidos y
+          orientaciones generales del curso.
+        </p>
+
+      </div>
+
+      <a
+        class="sise-syllabus-btn"
+        href="#"
+        data-pending-link>
+
+        Ver sílabo&nbsp; →
+
+      </a>
+
+    </div>
+
+
   </div>
 
 
-
-  <!-- =======================================================
-       PLANTILLA: EVALUACIÓN
-  ======================================================== -->
+  <!-- =====================================================
+       EVALUACIÓN
+  ====================================================== -->
 
   <div
     id="sise-template-evaluacion"
@@ -1802,20 +1709,17 @@
 
 
     <p>
-
       A lo largo del curso desarrollarás evidencias aplicadas
-      a tu propio contexto docente.
-
-      El proceso avanza desde el diagnóstico de prácticas y
-      evidencias actuales hasta la integración de una estrategia
-      completa de evaluación auténtica por competencias.
-
+      a tu contexto y participarás en un proceso de
+      <strong>coevaluación entre pares</strong> para fortalecer
+      la valoración mediante criterios y retroalimentación.
     </p>
-
 
 
     <div class="sise-evaluation-grid">
 
+
+      <!-- 01 -->
 
       <article class="sise-evaluation-card">
 
@@ -1828,17 +1732,15 @@
         </h3>
 
         <p>
-
           Identificarás brechas entre competencia, evidencia y
           desempeño observable y rediseñarás una evidencia mediante
-          diseño inverso para conectarla con un contexto real de
-          aplicación.
-
+          diseño inverso para conectarla con un contexto real.
         </p>
 
       </article>
 
 
+      <!-- 02 -->
 
       <article class="sise-evaluation-card">
 
@@ -1851,35 +1753,103 @@
         </h3>
 
         <p>
-
           Construirás un instrumento con criterios observables,
           niveles de desempeño y un criterio explícito de uso
           responsable y transparente de Inteligencia Artificial.
-
         </p>
 
       </article>
 
 
+      <!-- 03 COEVALUACIÓN -->
 
-      <article class="sise-evaluation-card">
+      <article class="sise-evaluation-card sise-coeval-card">
 
         <div class="sise-evaluation-icon">
           03
         </div>
 
         <h3>
-          Proyecto final
+          Coevaluación
         </h3>
 
-        <p>
-
-          Integrarás evidencias, criterios, instrumento,
-          retroalimentación, uso responsable de IA y condiciones
-          de implementación en una estrategia de evaluación
-          auténtica aplicable a un curso real.
-
+        <p class="sise-coeval-intro">
+          Revisa las evidencias de un compañero y realiza una
+          valoración utilizando la rúbrica de la actividad.
         </p>
+
+
+        <div
+          class="sise-coeval-flow"
+          aria-label="Flujo de coevaluación">
+
+
+          <div class="sise-coeval-step">
+
+            <strong>
+              01
+            </strong>
+
+            <span>
+              Revisa<br>
+              evidencias
+            </span>
+
+          </div>
+
+
+          <div class="sise-coeval-arrow">
+            ›
+          </div>
+
+
+          <div class="sise-coeval-step">
+
+            <strong>
+              02
+            </strong>
+
+            <span>
+              Aplica<br>
+              la rúbrica
+            </span>
+
+          </div>
+
+
+          <div class="sise-coeval-arrow">
+            ›
+          </div>
+
+
+          <div class="sise-coeval-step">
+
+            <strong>
+              03
+            </strong>
+
+            <span>
+              Retroalimenta
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+        <!-- MANUAL DE COEVALUACIÓN -->
+
+        <a
+          class="sise-coeval-manual-btn"
+          href="https://aulad.educad.pe/courses/668/pages/manual-de-coevaluacion?module_item_id=6992"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Manual de coevaluación&nbsp; →
+
+        </a>
+
 
       </article>
 
@@ -1887,6 +1857,7 @@
     </div>
 
 
+    <!-- RESULTADO INTEGRADOR -->
 
     <div class="sise-pass-card">
 
@@ -1896,77 +1867,16 @@
 
       <p>
 
-        <strong>Resultado integrador:</strong>
+        <strong>
+          Resultado integrador:
+        </strong>
 
-        diseñarás y sustentarás una estrategia completa articulando
-        competencia, resultado de aprendizaje, evidencia, criterios,
-        instrumento, retroalimentación, uso responsable de IA y
-        condiciones de implementación.
-
-      </p>
-
-    </div>
-
-
-  </div>
-
-
-
-  <!-- =======================================================
-       PLANTILLA: DESCARGABLES
-  ======================================================== -->
-
-  <div
-    id="sise-template-descargables"
-    class="sise-template"
-    data-kicker="Material descargable"
-    data-title="Sílabo del curso">
-
-
-    <div class="sise-download-content">
-
-
-      <div class="sise-download-icon">
-        ↓
-      </div>
-
-
-      <h3>
-        Sílabo del curso
-      </h3>
-
-
-      <p>
-
-        Consulta el sílabo para revisar la información general,
-        organización, resultados de aprendizaje, contenidos y
-        orientaciones del curso.
+        diseñarás una estrategia articulando competencia,
+        resultado de aprendizaje, evidencia, criterios,
+        instrumento, retroalimentación, uso responsable de IA
+        y condiciones de implementación.
 
       </p>
-
-
-      <div class="sise-download-actions">
-
-
-        <!--
-          PENDIENTE:
-          reemplazar # por la URL real del sílabo.
-          Cuando se agregue la URL también se puede retirar
-          data-pending-link.
-        -->
-
-        <a
-          class="sise-download-btn"
-          href="#"
-          data-pending-link>
-
-          Sílabo&nbsp; ↓
-
-        </a>
-
-
-      </div>
-
 
     </div>
 
@@ -1975,7 +1885,6 @@
 
 
 </div>
-
 
 
 <!-- =========================================================
@@ -1988,7 +1897,6 @@
   var component =
     document.getElementById("sise-andragogia-home");
 
-
   if(!component){
     return;
   }
@@ -1997,32 +1905,26 @@
   var buttons =
     component.querySelectorAll(".sise-nav-button");
 
-
   var kicker =
     component.querySelector("#sise-dynamic-kicker");
 
-
   var title =
     component.querySelector("#sise-dynamic-title");
-
 
   var body =
     component.querySelector("#sise-dynamic-body");
 
 
+  /* =====================================================
+     CAMBIO DE SECCIÓN
+  ====================================================== */
 
-  /* ========================================================
-     CAMBIO DE SECCIONES INTERNAS
-  ======================================================== */
-
-  function changeSection(section, selectedButton){
-
+  function changeSection(section,selectedButton){
 
     var template =
       component.querySelector(
         "#sise-template-" + section
       );
-
 
     if(!template){
       return;
@@ -2054,78 +1956,62 @@
 
     buttons.forEach(function(button){
 
-
-      var isActive =
+      var active =
         button === selectedButton;
 
 
       button.classList.toggle(
         "active",
-        isActive
+        active
       );
 
 
       button.setAttribute(
         "aria-selected",
-        isActive ? "true" : "false"
+        active ? "true" : "false"
       );
 
-
     });
-
 
   }
 
 
-
   buttons.forEach(function(button){
-
 
     button.addEventListener(
       "click",
       function(){
-
 
         changeSection(
           button.getAttribute("data-section"),
           button
         );
 
-
       }
     );
-
 
   });
 
 
-
-  /* ========================================================
-     SOLO BLOQUEA EL SÍLABO
-     HASTA QUE SE CONFIGURE SU URL
-  ======================================================== */
+  /* =====================================================
+     SÍLABO PENDIENTE
+  ====================================================== */
 
   component.addEventListener(
     "click",
     function(event){
-
 
       var pending =
         event.target.closest(
           "[data-pending-link]"
         );
 
-
       if(pending){
 
         event.preventDefault();
-
         event.stopPropagation();
 
-        return;
-
       }
-
 
     }
   );
