@@ -166,7 +166,6 @@
 
 /* =========================================================
    DATOS DEL CURSO
-   COMPACTO PARA CANVAS
 ========================================================= */
 
 #sise-andragogia-home .sise-stats-wrap{
@@ -488,7 +487,7 @@
 
 
 /* =========================================================
-   MÓDULOS SIMPLIFICADOS
+   MÓDULOS
 ========================================================= */
 
 #sise-andragogia-home .sise-modules-grid{
@@ -857,8 +856,7 @@
 
 
 /* =========================================================
-   CANVAS / TABLET
-   DATOS SIEMPRE EN UNA FILA
+   TABLET
 ========================================================= */
 
 @media screen and (max-width:900px){
@@ -1026,6 +1024,7 @@
     transform:rotate(90deg);
   }
 }
+
 </style>
 
 
@@ -1684,8 +1683,9 @@
 
       <a
         class="sise-syllabus-btn"
-        href="#"
-        data-pending-link>
+        href="https://aulad.educad.pe/courses/668/pages/silabo-del-curso"
+        target="_blank"
+        rel="noopener noreferrer">
 
         Ver sílabo&nbsp; →
 
@@ -1991,30 +1991,6 @@
     );
 
   });
-
-
-  /* =====================================================
-     SÍLABO PENDIENTE
-  ====================================================== */
-
-  component.addEventListener(
-    "click",
-    function(event){
-
-      var pending =
-        event.target.closest(
-          "[data-pending-link]"
-        );
-
-      if(pending){
-
-        event.preventDefault();
-        event.stopPropagation();
-
-      }
-
-    }
-  );
 
 
 })();
