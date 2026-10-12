@@ -688,7 +688,7 @@
 }
 
 #sise-andragogia-home .sise-evaluation-card{
-  min-height:310px;
+  min-height:290px;
   padding:24px 21px;
   border:1px solid #E9E1E4;
   border-top:5px solid var(--pink);
@@ -727,68 +727,98 @@
 
 
 /* =========================================================
-   COEVALUACIÓN
+   COEVALUACIÓN PRÁCTICA OPCIONAL
 ========================================================= */
 
-#sise-andragogia-home .sise-coeval-card{
-  display:flex;
-  flex-direction:column;
+#sise-andragogia-home .sise-optional-card{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns:72px 1fr;
+  gap:18px;
+  align-items:start;
+  min-height:auto;
+  margin-top:10px;
+  padding:29px 31px;
+  border:1px solid #F3CBD7;
+  border-left:7px solid var(--pink);
+  border-top:1px solid #F3CBD7;
+  border-radius:16px;
+  background:linear-gradient(105deg,#FFF3F7 0%,#FFF9FB 54%,#FFFFFF 100%);
+  box-shadow:none;
 }
 
-#sise-andragogia-home .sise-coeval-intro{
-  margin-bottom:13px !important;
+#sise-andragogia-home .sise-optional-card .sise-evaluation-icon{
+  width:60px;
+  height:60px;
+  margin:0;
+  font-size:20px;
 }
 
-#sise-andragogia-home .sise-coeval-flow{
-  display:flex;
-  align-items:stretch;
-  gap:5px;
-  margin:5px 0 16px;
-}
-
-#sise-andragogia-home .sise-coeval-step{
-  flex:1;
+#sise-andragogia-home .sise-optional-content{
   min-width:0;
-  padding:9px 5px;
-  border:1px solid #F1D5DE;
-  border-radius:8px;
-  background:#FFF4F7;
-  text-align:center;
 }
 
-#sise-andragogia-home .sise-coeval-step strong{
-  display:block;
-  margin-bottom:3px;
-  color:var(--pink);
-  font-size:11px;
-  font-weight:900;
-}
-
-#sise-andragogia-home .sise-coeval-step span{
-  display:block;
-  color:#4D4548;
-  font-size:10px;
-  line-height:1.2;
-  font-weight:700;
-}
-
-#sise-andragogia-home .sise-coeval-arrow{
-  display:flex;
+#sise-andragogia-home .sise-optional-badge{
+  display:inline-flex;
   align-items:center;
   justify-content:center;
-  flex:0 0 12px;
+  margin:0 0 10px;
+  padding:6px 13px;
+  border:1px solid #F2CAD7;
+  border-radius:999px;
   color:var(--pink);
-  font-size:18px;
+  background:#FFFFFF;
+  font-size:12px;
+  line-height:1;
   font-weight:900;
+  letter-spacing:.7px;
+  text-transform:uppercase;
+}
+
+#sise-andragogia-home .sise-optional-card h3{
+  margin:0 0 11px;
+  color:#231F20;
+  font-size:21px;
+  line-height:1.25;
+}
+
+#sise-andragogia-home .sise-optional-card p{
+  max-width:1050px;
+  margin:0;
+  color:#665E61;
+  font-size:14px;
+  line-height:1.6;
+}
+
+#sise-andragogia-home .sise-optional-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:17px;
+}
+
+#sise-andragogia-home .sise-optional-note{
+  display:inline-flex;
+  align-items:center;
+  min-height:43px;
+  padding:10px 14px;
+  border-radius:8px;
+  color:#FFFFFF;
+  background:#231F20;
+  font-size:13px;
+  line-height:1.2;
+  font-weight:800;
 }
 
 #sise-andragogia-home .sise-coeval-manual-btn{
-  display:flex;
-  width:100%;
+  display:inline-flex;
+  width:auto;
+  min-height:43px;
   align-items:center;
   justify-content:center;
-  margin-top:auto;
-  padding:11px 13px;
+  margin:0;
+  padding:10px 18px;
   border-radius:8px;
   color:#FFFFFF;
   background:var(--dark-2);
@@ -918,6 +948,10 @@
   #sise-andragogia-home .sise-evaluation-card{
     min-height:auto;
   }
+
+  #sise-andragogia-home .sise-optional-card{
+    grid-column:auto;
+  }
 }
 
 
@@ -1015,13 +1049,26 @@
     margin:0 auto 20px;
   }
 
-  #sise-andragogia-home .sise-coeval-flow{
-    display:grid;
+  #sise-andragogia-home .sise-optional-card{
     grid-template-columns:1fr;
+    padding:24px 21px;
   }
 
-  #sise-andragogia-home .sise-coeval-arrow{
-    transform:rotate(90deg);
+  #sise-andragogia-home .sise-optional-card .sise-evaluation-icon{
+    width:52px;
+    height:52px;
+  }
+
+  #sise-andragogia-home .sise-optional-actions{
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  #sise-andragogia-home .sise-optional-note,
+  #sise-andragogia-home .sise-coeval-manual-btn{
+    width:100%;
+    justify-content:center;
+    text-align:center;
   }
 }
 
@@ -1087,9 +1134,6 @@
 
       <tr>
 
-
-        <!-- MÓDULOS -->
-
         <td>
 
           <div class="sise-stat-icon">
@@ -1113,8 +1157,6 @@
         </td>
 
 
-        <!-- DURACIÓN -->
-
         <td>
 
           <div class="sise-stat-icon">
@@ -1137,8 +1179,6 @@
         </td>
 
 
-        <!-- HABILIDAD -->
-
         <td>
 
           <div class="sise-stat-icon">
@@ -1159,8 +1199,6 @@
 
         </td>
 
-
-        <!-- MODALIDAD -->
 
         <td>
 
@@ -1186,8 +1224,6 @@
         </td>
 
 
-        <!-- PÚBLICO -->
-
         <td>
 
           <div class="sise-stat-icon">
@@ -1210,7 +1246,6 @@
           </p>
 
         </td>
-
 
       </tr>
 
@@ -1288,7 +1323,6 @@
       Evaluación
 
     </button>
-
 
   </div>
 
@@ -1395,7 +1429,6 @@
 
       </div>
 
-
     </div>
 
   </section>
@@ -1481,7 +1514,6 @@
       </p>
 
     </div>
-
 
   </div>
 
@@ -1653,7 +1685,6 @@
 
       </article>
 
-
     </div>
 
 
@@ -1693,12 +1724,11 @@
 
     </div>
 
-
   </div>
 
 
   <!-- =====================================================
-       EVALUACIÓN
+       EVALUACIÓN ACTUALIZADA
   ====================================================== -->
 
   <div
@@ -1709,17 +1739,18 @@
 
 
     <p>
-      A lo largo del curso desarrollarás evidencias aplicadas
-      a tu contexto y participarás en un proceso de
-      <strong>coevaluación entre pares</strong> para fortalecer
-      la valoración mediante criterios y retroalimentación.
+      La evaluación del curso considera una actividad en cada módulo,
+      con un peso de <strong>15% cada una</strong>; la participación en
+      el foro, con un peso total de <strong>10%</strong>; y una evaluación
+      final mediante <strong>Quizizz</strong>, con un peso de
+      <strong>30%</strong>.
     </p>
 
 
     <div class="sise-evaluation-grid">
 
 
-      <!-- 01 -->
+      <!-- TARJETA 01 -->
 
       <article class="sise-evaluation-card">
 
@@ -1728,19 +1759,20 @@
         </div>
 
         <h3>
-          Diagnóstico y rediseño
+          Actividades por módulo
         </h3>
 
         <p>
-          Identificarás brechas entre competencia, evidencia y
-          desempeño observable y rediseñarás una evidencia mediante
-          diseño inverso para conectarla con un contexto real.
+          En cada uno de los cuatro módulos desarrollarás una actividad
+          orientada a <strong>validar y aplicar los conocimientos alcanzados</strong>.
+          Cada actividad representa el <strong>15% de la nota final</strong>,
+          acumulando un <strong>60% en total</strong>.
         </p>
 
       </article>
 
 
-      <!-- 02 -->
+      <!-- TARJETA 02 -->
 
       <article class="sise-evaluation-card">
 
@@ -1749,110 +1781,92 @@
         </div>
 
         <h3>
-          Instrumentos y uso responsable de IA
+          Participación
         </h3>
 
         <p>
-          Construirás un instrumento con criterios observables,
-          niveles de desempeño y un criterio explícito de uso
-          responsable y transparente de Inteligencia Artificial.
+          Se considerará tu participación en el
+          <strong>foro del curso</strong>, donde compartirás reflexiones
+          y aportes de acuerdo con las indicaciones planteadas.
+          Esta participación representa el
+          <strong>10% de la nota final</strong>.
         </p>
 
       </article>
 
 
-      <!-- 03 COEVALUACIÓN -->
+      <!-- TARJETA 03 -->
 
-      <article class="sise-evaluation-card sise-coeval-card">
+      <article class="sise-evaluation-card">
 
         <div class="sise-evaluation-icon">
           03
         </div>
 
         <h3>
-          Coevaluación
+          Evaluación final
         </h3>
 
-        <p class="sise-coeval-intro">
-          Revisa las evidencias de un compañero y realiza una
-          valoración utilizando la rúbrica de la actividad.
+        <p>
+          Al finalizar el curso realizarás una
+          <strong>evaluación mediante Quizizz</strong> para demostrar
+          los conocimientos desarrollados a lo largo de los cuatro módulos.
+          Esta evaluación representa el
+          <strong>30% de la nota final</strong>.
         </p>
-
-
-        <div
-          class="sise-coeval-flow"
-          aria-label="Flujo de coevaluación">
-
-
-          <div class="sise-coeval-step">
-
-            <strong>
-              01
-            </strong>
-
-            <span>
-              Revisa<br>
-              evidencias
-            </span>
-
-          </div>
-
-
-          <div class="sise-coeval-arrow">
-            ›
-          </div>
-
-
-          <div class="sise-coeval-step">
-
-            <strong>
-              02
-            </strong>
-
-            <span>
-              Aplica<br>
-              la rúbrica
-            </span>
-
-          </div>
-
-
-          <div class="sise-coeval-arrow">
-            ›
-          </div>
-
-
-          <div class="sise-coeval-step">
-
-            <strong>
-              03
-            </strong>
-
-            <span>
-              Retroalimenta
-            </span>
-
-          </div>
-
-
-        </div>
-
-
-        <!-- MANUAL DE COEVALUACIÓN -->
-
-        <a
-          class="sise-coeval-manual-btn"
-          href="https://aulad.educad.pe/courses/668/pages/manual-de-coevaluacion?module_item_id=6992"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          Manual de coevaluación&nbsp; →
-
-        </a>
-
 
       </article>
 
+
+      <!-- COEVALUACIÓN PRÁCTICA OPCIONAL -->
+
+      <article class="sise-evaluation-card sise-optional-card">
+
+        <div class="sise-evaluation-icon">
+          +
+        </div>
+
+
+        <div class="sise-optional-content">
+
+          <span class="sise-optional-badge">
+            Opcional · Sin nota
+          </span>
+
+          <h3>
+            Coevaluación práctica
+          </h3>
+
+          <p>
+            Es una <strong>actividad integradora opcional</strong> que podrás
+            ir desarrollando progresivamente en cada módulo. Su propósito
+            es permitirte aplicar e integrar los aprendizajes del curso
+            a medida que avanzas en tu recorrido formativo.
+          </p>
+
+
+          <div class="sise-optional-actions">
+
+            <span class="sise-optional-note">
+              Actividad formativa · No tiene calificación
+            </span>
+
+
+            <a
+              class="sise-coeval-manual-btn"
+              href="https://aulad.educad.pe/courses/668/pages/manual-de-coevaluacion?module_item_id=6992"
+              target="_blank"
+              rel="noopener noreferrer">
+
+              Manual de coevaluación&nbsp; →
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
 
     </div>
 
@@ -1880,9 +1894,7 @@
 
     </div>
 
-
   </div>
-
 
 </div>
 
@@ -1913,6 +1925,43 @@
 
   var body =
     component.querySelector("#sise-dynamic-body");
+
+
+  function prepareExternalLinks(container){
+
+    if(!container){
+      return;
+    }
+
+    var links =
+      container.querySelectorAll("a[href]");
+
+    links.forEach(function(link){
+
+      var href =
+        link.getAttribute("href");
+
+      if(
+        href &&
+        !href.startsWith("#") &&
+        !href.startsWith("javascript:")
+      ){
+
+        link.setAttribute(
+          "target",
+          "_blank"
+        );
+
+        link.setAttribute(
+          "rel",
+          "noopener noreferrer"
+        );
+
+      }
+
+    });
+
+  }
 
 
   /* =====================================================
@@ -1954,6 +2003,9 @@
       "siseFadeIn .35s ease";
 
 
+    prepareExternalLinks(body);
+
+
     buttons.forEach(function(button){
 
       var active =
@@ -1992,6 +2044,8 @@
 
   });
 
+
+  prepareExternalLinks(component);
 
 })();
 </script>
